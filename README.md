@@ -70,7 +70,7 @@ This uses RGB to represent a color, the syntax looks like this: `38;2;⟨r⟩;�
 
 Now in our code we have the following: `\x1b[38;2;0;0;255m` for the foreground and `\x1b[48;2;255;0;0m` for the background, mixing them we have `\x1b[38;2;0;0;255;48;2;255;0;0m`. If you want to add style, our code will be `\x1b[1;38;2;0;0;255;48;2;255;0;0m`
 
-    Here we are not adding a file to print out all these colors because there are 16 million but surely it is not necessary.
+Here we are not adding a file to print out all these colors because there are 16 million, but surely it is not necessary.
 
 ### Reset
 

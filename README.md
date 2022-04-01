@@ -22,6 +22,8 @@ The last `m` character is just to tell our code that we are finishing the scape 
 
 In our code it looks like this: `\x1b[1m` (1 is for bold the text).
 
+[By executing this code you can see a list of some styles.](https://github.com/Reve7339/ANSIColors-and-style/blob/main/printing/styles.py)
+
 ### Colors
 
 Several attributes can be set in the same sequence, separated by semicolons. Colors can be used with styles or alone.
@@ -33,6 +35,8 @@ There are 3 ways to set the colors on our outputs depending on the terminal supp
 The range [30-37] is for the text and the range [40-47] is for the background, we concatenate it with semicolons, so we have this in our code: `\x1b[35;42m` (35 is for magenta and 42 for green)
 
 In the previous example we did not use style, so adding style to our code it looks like this: `\x1b[1;35;42m` (Order doesn't matter, so we can interchange the numbers separated by semicolons)
+
+[By executing this code you can see a list of all these colors.](https://github.com/Reve7339/ANSIColors-and-style/blob/main/printing/3-4-bit.py)
 
 #### 8-bit
 
@@ -58,11 +62,15 @@ Mixing them looks like this: `\x1b[38;5;200;48;5;6m` and adding the style looks 
 
 You can interchange them but never forget that the sequence of three numbers for the background and foreground are strictly like we presented them.
 
+[By executing this code you can see a list of all these colors.](https://github.com/Reve7339/ANSIColors-and-style/blob/main/printing/8-bit.py)
+
 #### 24-bit
 
 This uses RGB to represent a color, the syntax looks like this: `38;2;⟨r⟩;⟨g⟩;⟨b⟩` for the foreground and `48;2;⟨r⟩;⟨g⟩;⟨b⟩` for the background (Note that we use `2` instead of `5` like before). You can search in your browser for a specific RGB code. As well as 8-bit color the order of these 5 numbers is strictly as I showed you.
 
 Now in our code we have the following: `\x1b[38;2;0;0;255m` for the foreground and `\x1b[48;2;255;0;0m` for the background, mixing them we have `\x1b[38;2;0;0;255;48;2;255;0;0m`. If you want to add style, our code will be `\x1b[1;38;2;0;0;255;48;2;255;0;0m`
+
+    Here we are not adding a file to print out all these colors because there are 16 million but surely it is not necessary.
 
 ### Reset
 
